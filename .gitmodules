@@ -1,0 +1,9 @@
+[submodule "src/Plugins/Nop.Plugin.ExternalAuth.oAuth2"]
+	path = src/Plugins/Nop.Plugin.ExternalAuth.oAuth2
+	url = git@github.com:marketvision/Nop.Plugin.ExternalAuth.oAuth2.git
+[submodule "src/Plugins/Nop.Plugin.Payments.Arbor"]
+	path = src/Plugins/Nop.Plugin.Payments.Arbor
+	url = git@github.com:marketvision/Nop.Plugin.Payments.Arbor.git
+[submodule "src/Presentation/Nop.Web/Themes/Emporio"]
+	path = src/Presentation/Nop.Web/Themes/Emporio
+	url = git@github.com:marketvision/Nop.Commerce.Emporio.Theme.git
