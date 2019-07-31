@@ -7,9 +7,7 @@
 [submodule "src/Presentation/Nop.Web/Themes/Emporio"]
 	path = src/Presentation/Nop.Web/Themes/Emporio
 	url = git@github.com:marketvision/Nop.Commerce.Emporio.Theme.git
-
 [submodule "ci"]
-
 	path = ci
 	url = git@github.com:marketvision/Nop.Commerce.Docker.git
 [submodule "src/Plugins/Nop.Plugin.NewGen.Pusher"]
