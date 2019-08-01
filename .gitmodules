@@ -13,3 +13,6 @@
 [submodule "src/Plugins/Nop.Plugin.NewGen.Pusher"]
 	path = src/Plugins/Nop.Plugin.NewGen.Pusher
 	url = git@github.com:marketvision/Nop.Plugin.NewGen.Pusher.git
+[submodule "src/Plugins/Nop.Plugin.Misc.EventPublisher"]
+	path = src/Plugins/Nop.Plugin.Misc.EventPublisher
+	url = git@github.com:marketvision/Nop.Plugin.Misc.EventPublisher.git
