@@ -16,3 +16,6 @@
 [submodule "src/Plugins/Nop.Plugin.Misc.EventPublisher"]
 	path = src/Plugins/Nop.Plugin.Misc.EventPublisher
 	url = git@github.com:marketvision/Nop.Plugin.Misc.EventPublisher.git
+[submodule "src/Plugins/Nop.Plugin.Misc.NewGen"]
+	path = src/Plugins/Nop.Plugin.Misc.NewGen
+	url = git@github.com:marketvision/Nop.Plugin.Misc.NewGen.git

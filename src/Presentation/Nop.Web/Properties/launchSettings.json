@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "https://commerce.marketvision.com",
+      "applicationUrl": "https://commerce-us.marketvision.com",
       "sslPort": 0
     }
   },
@@ -12,7 +12,7 @@
     "IIS": {
       "commandName": "IIS",
       "launchBrowser": true,
-      "launchUrl": "https://commerce.marketvision.com",
+      "launchUrl": "https://commerce-us.marketvision.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_DETAILEDERRORS": "1"
