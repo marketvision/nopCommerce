@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Nop.Web.Framework.Models;
 
 namespace Nop.Web.Models.Catalog
@@ -23,5 +24,15 @@ namespace Nop.Web.Models.Catalog
         public bool HaveSubCategories { get; set; }
 
         public string Route { get; set; }
+    }
+
+    public static class CategoryModelExtensions
+    {
+        public static bool ShowCategory(this CategorySimpleModel category)
+        {
+            return
+                category.NumberOfProducts.HasValue && category.NumberOfProducts > 0 ||
+                category.SubCategories?.Sum(sc => sc.NumberOfProducts ?? 0) > 0;
+        }
     }
 }

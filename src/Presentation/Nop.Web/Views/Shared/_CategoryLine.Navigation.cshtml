@@ -29,31 +29,40 @@
         liClass += " last";
     }
 }
-<li class="@liClass">
-    <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })">@Model.Category.Name
-        @if (Model.Category.NumberOfProducts.HasValue)
-        {
-            <text> </text>@T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
-        }
-    </a>
-    @{
-        if (Model.Category.Id == Model.CurrentCategoryId ||
-            Model.Category.SubCategories.Count(BreadCrumbContainsCurrentCategoryId) > 0)
-        {
-            if (Model.Category.SubCategories.Count > 0)
-            {
-                <ul class="sublist">
-                    @foreach (var subCategory in Model.Category.SubCategories)
+
+@{
+    @if (Model.Category.ShowCategory())
+    {
+        <li class="@liClass">
+            <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })">@Model.Category.Name
+                @if (Model.Category.NumberOfProducts.HasValue)
+                {
+                    <text> </text>@T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
+                }
+            </a>
+            @{
+                if (Model.Category.Id == Model.CurrentCategoryId ||
+                    Model.Category.SubCategories.Count(BreadCrumbContainsCurrentCategoryId) > 0)
+                {
+                    if (Model.Category.SubCategories.Count > 0)
                     {
-                        var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
-                        {
-                            CurrentCategoryId = Model.CurrentCategoryId,
-                            Category = subCategory
-                        };
-                        @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
+                        <ul class="sublist">
+                            @foreach (var subCategory in Model.Category.SubCategories)
+                            {
+                                @if (subCategory.ShowCategory())
+                                {
+                                    var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
+                                    {
+                                        CurrentCategoryId = Model.CurrentCategoryId,
+                                        Category = subCategory
+                                    };
+                                    @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
+                                }
+                            }
+                        </ul>
                     }
-                </ul>
+                }
             }
-        }
+        </li>
     }
-</li>
+}
