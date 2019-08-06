@@ -19,3 +19,6 @@
 [submodule "src/Plugins/Nop.Plugin.Misc.NewGen"]
 	path = src/Plugins/Nop.Plugin.Misc.NewGen
 	url = git@github.com:marketvision/Nop.Plugin.Misc.NewGen.git
+[submodule "src/Plugins/Nop.Plugin.Misc.DataMesh"]
+	path = src/Plugins/Nop.Plugin.Misc.DataMesh
+	url = git@github.com:marketvision/Nop.Plugin.Misc.DataMesh
